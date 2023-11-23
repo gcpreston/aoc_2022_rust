@@ -1,6 +1,7 @@
 // mod day_02;
-mod day_03;
+// mod day_03;
+mod day_04;
 
 fn main() {
-    day_03::run_part_2("./inputs/day_03.txt");
+    day_04::run_part_2("./inputs/day_04.txt");
 }
