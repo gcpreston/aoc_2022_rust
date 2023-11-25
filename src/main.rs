@@ -1,7 +1,6 @@
-// mod day_02;
-// mod day_03;
-mod day_04;
+#[allow(dead_code)]
+mod day_05;
 
 fn main() {
-    day_04::run_part_2("./inputs/day_04.txt");
+    day_05::run_part_1("./inputs/day_05.txt");
 }
