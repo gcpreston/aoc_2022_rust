@@ -9,13 +9,14 @@ fn apply_move_part_1(stacks: &mut [Vec<char>; 9], count: u32, from: usize, to: u
 }
 
 fn apply_move_part_2(stacks: &mut [Vec<char>; 9], count: usize, from: usize, to: usize) {
+    /* TODO: Still would like to do this in not O(n)
     let from_stack = stacks[from - 1];
     let mut to_stack  = stacks[to - 1];
 
     let slice_to_move = &from_stack[from_stack.len() - count..];
     to_stack.extend_from_slice(slice_to_move);
+    */
 
-    /*
     let mut temp: Vec<char> = Vec::new();
 
     for _ in 0..count {
@@ -26,9 +27,9 @@ fn apply_move_part_2(stacks: &mut [Vec<char>; 9], count: usize, from: usize, to:
     for _ in 0..count {
         stacks[to - 1].push(temp.pop().unwrap());
     }
-    */
 }
 
+/*
 fn take_slice(stacks: &mut [Vec<char>; 9], count: usize, from: usize) -> Vec<char> {
     let mut from_stack = &stacks[from - 1];
     let keep_slice = &from_stack[..from_stack.len() - count];
@@ -37,6 +38,7 @@ fn take_slice(stacks: &mut [Vec<char>; 9], count: usize, from: usize) -> Vec<cha
     stacks[from - 1] = keep_slice.to_vec();
     take_slice.to_vec()
 }
+ */
 
 pub fn run_part_1(file_path: &str) {
     // let mut stacks: [Vec<char>; 3] = [vec!['Z', 'N'], vec!['M', 'C', 'D'], vec!['P']];
